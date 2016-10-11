@@ -26,3 +26,48 @@ $user->name = 'zhangfei';
 $user->mobile = '160';
 $user->regtime = 'time';
  */
+
+//observer
+/*
+class Event extends \Design\EventGenerator
+{
+public function trigger()
+{
+echo 'Event</br>';
+$this->notify();
+}
+}
+class Observer extends \Design\Observer
+{
+public function update()
+{
+echo '逻辑一</br>';
+}
+}
+class Observer2 extends \Design\Observer
+{
+public function update()
+{
+echo '逻辑二</br>';
+}
+}
+$event = new Event();
+$event->addObserver(new Observer);
+$event->addObserver(new Observer2);
+$event->trigger();
+ */
+/*
+\Design\ClientProtype::main();
+ */
+
+$allUserLterator = new \Design\AllUserLterator;
+foreach ($allUserLterator as $key => $user) {
+    print_r($user);
+}
+
+/**
+ * 单一原则
+ * 开放封闭原则
+ * 依赖倒置
+ * 配置化
+ */

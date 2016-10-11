@@ -7,7 +7,7 @@ class User
     public $name;
     public $mobile;
     public $regtime;
-    protected $conn;
+    private $conn;
 
     public function __construct($id)
     {
